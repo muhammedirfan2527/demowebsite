@@ -107,7 +107,7 @@ const Display = ({ menuDisplay }) => {
 
                 {/* Product info */}
                 <img
-                  src={`http://localhost:5000/images/${item.image}`}
+                  src={`https://demowebsite-black.vercel.app/images/${item.image}`}
                   alt={item.name}
                   className="product-image"
                 />
