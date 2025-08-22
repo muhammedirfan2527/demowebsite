@@ -194,6 +194,7 @@ const getDiscountedPrice = (product) => {
     try {
       const res = await fetch(`https://demowebsite-9lag.onrender.com/wishlist?userEmail=${email}`);
       const data = await res.json();
+      setFavorite(data.length && data[0].items ? data[0].items : []);
       if (data.length) {
         const wishlist = data[0];
         const exists = wishlist.items.some(i => i.productId === product.id);
@@ -205,7 +206,8 @@ const getDiscountedPrice = (product) => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ ...wishlist, items: updatedItems }),
         });
-        setFavorite(updatedItems);
+        setFavorite(updatedItems || []);
+
       } else {
         const newWishlist = {
           userEmail: email,
@@ -218,7 +220,7 @@ const getDiscountedPrice = (product) => {
           body: JSON.stringify(newWishlist),
         });
         const savedWishlist = await res.json();
-        setFavorite(savedWishlist.items);
+        setFavorite(savedWishlist.items || []);
       }
     } catch (err) {
       console.log("Wishlist error:", err);
