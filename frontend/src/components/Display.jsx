@@ -23,7 +23,7 @@ const Display = ({ menuDisplay }) => {
       .then((response) => response.json())
       .then((data) => setOffer(data))
       .catch((error) => {
-  alert("Error: " + error.message);
+  alert("Error in offer of display: " + error.message);
 });
   };
 
