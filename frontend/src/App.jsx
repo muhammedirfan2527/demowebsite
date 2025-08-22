@@ -13,7 +13,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='https://demowebsite-black.vercel.app/login' element={<Login/>} />
+        <Route path='/login' element={<Login/>} />
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/wishlist' element={<Wishlist/>}/>
         <Route path='/userorder' element={<UserOrder/>}/>
