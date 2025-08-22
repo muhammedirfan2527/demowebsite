@@ -70,6 +70,7 @@ const Login = () => {
       }
     } catch (err) {
       alert("Error in login: " + err.message);
+      console.log("Error in login: " + err.message)
     }
   };
 
