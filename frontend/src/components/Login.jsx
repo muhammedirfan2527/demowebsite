@@ -35,8 +35,8 @@ const Login = () => {
 
     const url =
       currState === "Login"
-        ? "http://localhost:5000/login"
-        : "http://localhost:5000/signup";
+        ? "https://demowebsite-black.vercel.app/login"
+        : "https://demowebsite-black.vercel.app/signup";
 
     const payload =
       currState === "Login"
