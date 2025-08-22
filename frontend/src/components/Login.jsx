@@ -69,7 +69,7 @@ const Login = () => {
         setError(data.error || "Something went wrong");
       }
     } catch (err) {
-      alert("Error in login": err.message);
+      alert("Error in login: " + err.message);
     }
   };
 
