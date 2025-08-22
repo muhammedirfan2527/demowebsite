@@ -7,11 +7,11 @@ const Menu = ({menuDisplay,setMenuDisplay}) => {
     const [menu,setMenu] = useState([])
 
     const getmenu= () =>{
-        fetch("http://localhost:5000/category")
+        fetch("https://demowebsite-9lag.onrender.com/category")
         .then(response => response.json())
         .then(data => setMenu(data))
         .catch((error) => {
-  alert("Error: " + error.message);
+  alert("Error in category of menu: " + error.message);
 })
     }
     useEffect(getmenu, [])
