@@ -19,7 +19,7 @@ const Display = ({ menuDisplay }) => {
 
   // Fetch offers
   const getOffer = () => {
-    fetch("http://localhost:5000/offer")
+    fetch("https://demowebsite-9lag.onrender.com/offer")
       .then((response) => response.json())
       .then((data) => setOffer(data))
       .catch(() => {
