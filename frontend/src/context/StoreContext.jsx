@@ -31,7 +31,7 @@ const StoreContextProvider = (props) => {
         const res = await fetch(`https://demowebsite-9lag.onrender.com/wishlist?userEmail=${email}`);
         const data = await res.json();
         setFavorite(data.length ? data[0].items : []);
-      } catch((error) => {
+      } catch(error) => {
   alert("Error: " + error.message);
 }
     };
@@ -46,7 +46,7 @@ const StoreContextProvider = (props) => {
         const data = await response.json();
         setAllproduct(data);
       }
-    } .catch((error) => {
+    } .catch(error) => {
   alert("Error: " + error.message);
 }
   };
@@ -59,7 +59,7 @@ const StoreContextProvider = (props) => {
       const res = await fetch(`https://demowebsite-9lag.onrender.com/cart?userEmail=${userEmail}`);
       const data = await res.json();
       setCart(data.length ? data[0] : null);
-    }.catch((error) => {
+    }.catch(error) => {
   alert("Error: " + error.message);
 }
   };
@@ -73,7 +73,7 @@ const StoreContextProvider = (props) => {
       const res = await fetch("https://demowebsite-9lag.onrender.com/offer");
       const data = await res.json();
       setOffer(data);
-    } .catch((error) => {
+    } .catch(error) => {
   alert("Error: " + error.message);
 }
   };
