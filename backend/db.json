@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "id": 1755788294436,
+      "username": "Irfan",
+      "email": "irfan@gmail.com",
+      "password": "123456",
+      "createdAt": "2025-08-21T14:58:14.436Z"
+    }
+  ],
+  "category": [
+    {
+      "name": "moblie",
+      "createdAt": "2025-08-21T15:31:04.734Z",
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "category": "moblie",
+      "name": "Pixel 6a",
+      "brand": "Google",
+      "price": 24000,
+      "image": "1755790293093_images (1).jpg",
+      "createdAt": "2025-08-21T15:31:33.249Z",
+      "id": 1
+    }
+  ],
+  "offer": [],
+  "cart": [],
+  "wishlist": [],
+  "order": [
+    {
+      "id": 1755790968290,
+      "email": "irfan@gmail.com",
+      "address": {
+        "firstName": "Irfan",
+        "lastName": "C S",
+        "address": "Thrissur",
+        "pin": "680123",
+        "phone": "98767654543"
+      },
+      "items": [
+        {
+          "productId": 1,
+          "name": "Pixel 6a",
+          "price": 24000,
+          "quantity": 1
+        }
+      ],
+      "amount": 24000,
+      "createdAt": "2025-08-21T15:42:48.290Z",
+      "Status": "Canceled"
+    },
+    {
+      "id": 1755791305028,
+      "email": "irfan@gmail.com",
+      "address": {
+        "firstName": "Irfan",
+        "lastName": "C S",
+        "address": "Thrissur",
+        "pin": "680123",
+        "phone": "98767654543"
+      },
+      "items": [
+        {
+          "productId": 1,
+          "name": "Pixel 6a",
+          "price": 24000,
+          "quantity": 1
+        }
+      ],
+      "amount": 24000,
+      "Status": "Delivered",
+      "createdAt": "2025-08-21T15:48:25.028Z"
+    }
+  ]
+}
