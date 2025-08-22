@@ -32,7 +32,7 @@ const StoreContextProvider = (props) => {
         const data = await res.json();
         setFavorite(data.length ? data[0].items : []);
       } catch(error){
-  alert("Error: " + error.message);
+  alert("Error in wishlist of context: " + error.message);
 }
     };
     fetchWishlist();
@@ -47,7 +47,7 @@ const StoreContextProvider = (props) => {
         setAllproduct(data);
       }
     } catch(error){
-  alert("Error: " + error.message);
+  alert("Error in products of context: " + error.message);
 }
   };
   useEffect(() => { fetchInfo(); }, []);
@@ -60,7 +60,7 @@ const StoreContextProvider = (props) => {
       const data = await res.json();
       setCart(data.length ? data[0] : null);
     }catch(error) {
-  alert("Error: " + error.message);
+  alert("Error in cart of context: " + error.message);
 }
   };
 
@@ -74,7 +74,7 @@ const StoreContextProvider = (props) => {
       const data = await res.json();
       setOffer(data);
     }catch(error){
-  alert("Error: " + error.message);
+  alert("Error in offer of context: " + error.message);
 }
   };
   getOffer();
