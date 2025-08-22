@@ -33,10 +33,11 @@ const Login = () => {
       return;
     }
 
+    const API_BASE = "https://demowebsite-black.vercel.app"
     const url =
       currState === "Login"
-        ? "https://demowebsite-black.vercel.app/login"
-        : "https://demowebsite-black.vercel.app/signup";
+        ? `${API_BASE}/login`
+        : `${API_BASE}/signup`;
 
     const payload =
       currState === "Login"
