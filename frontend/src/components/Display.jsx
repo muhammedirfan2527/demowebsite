@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import "./Display.css";
 import { StoreContext } from "../context/StoreContext";
+import { useNavigate } from "react-router-dom";
 
 const Display = ({ menuDisplay }) => {
   const {
@@ -14,6 +15,7 @@ const Display = ({ menuDisplay }) => {
     Wishlist,
   } = useContext(StoreContext);
 
+  const navigate = useNavigate();
   const [offer, setOffer] = useState([]);
   const [sortOption, setSortOption] = useState("default");
 
@@ -131,7 +133,7 @@ const Display = ({ menuDisplay }) => {
                   <button
                     className="add-cart"
                     onClick={() => {
-                      if (!user) return window.location.replace("/login");
+                      if (!user) return navigate("/login");
                       getQuantity(item.id) > 0
                         ? increaseQuantity(item.id)
                         : addToCart(item);
