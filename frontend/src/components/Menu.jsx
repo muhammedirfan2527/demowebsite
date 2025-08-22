@@ -10,9 +10,9 @@ const Menu = ({menuDisplay,setMenuDisplay}) => {
         fetch("http://localhost:5000/category")
         .then(response => response.json())
         .then(data => setMenu(data))
-        .catch(error => {
-            alert("unable")
-        })
+        ..catch((error) => {
+  alert("Error: " + error.message);
+})
     }
     useEffect(getmenu, [])
     // const [menu, setMenu] = useState([
