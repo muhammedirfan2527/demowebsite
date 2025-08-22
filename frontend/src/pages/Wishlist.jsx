@@ -7,8 +7,9 @@ const Wishlist = () => {
 
   // Filter wishlist items
   const wishlistItems = allproduct.filter((item) =>
-    favorite.some(fav => fav.productId === item.id)
-  );
+  (favorite || []).some(fav => fav.productId === item.id)
+);
+
 
   return (
     <div className="wishlist">
