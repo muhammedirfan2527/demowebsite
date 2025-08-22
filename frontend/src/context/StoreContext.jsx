@@ -31,7 +31,7 @@ const StoreContextProvider = (props) => {
         const res = await fetch(`https://demowebsite-9lag.onrender.com/wishlist?userEmail=${email}`);
         const data = await res.json();
         setFavorite(data.length ? data[0].items : []);
-      } .catch((error) => {
+      } catch((error) => {
   alert("Error: " + error.message);
 }
     };
