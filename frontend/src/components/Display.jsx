@@ -22,9 +22,9 @@ const Display = ({ menuDisplay }) => {
     fetch("https://demowebsite-9lag.onrender.com/offer")
       .then((response) => response.json())
       .then((data) => setOffer(data))
-      .catch(() => {
-        alert("Unable to fetch offers");
-      });
+      .catch((error) => {
+  alert("Error: " + error.message);
+});
   };
 
   useEffect(getOffer, []);
