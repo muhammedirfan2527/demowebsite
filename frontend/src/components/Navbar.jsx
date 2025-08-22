@@ -10,11 +10,11 @@ const Navbar = () => {
   
   
       const getproducts=() => {
-          fetch("http://localhost:5000/products")
+          fetch("https://demowebsite-9lag.onrender.com/products")
           .then(response => response.json())
           .then(data => setProducts(data))
           .catch(error => {
-              alert("unable")
+              alert("Error in product of navbar:" + error.message)
           })
       }
   
